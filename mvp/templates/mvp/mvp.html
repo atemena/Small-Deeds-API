@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Starter Template - Materialize</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+	<nav class="black lighten-1" role="navigation">
+		<div class="nav-wrapper container"><a id="logo-container" href="#" class="responsive-img" class="brand-logo">
+			<!--<img src="{% static 'mvp/imgs/small_deeds_white.png' %}"></img>--></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+
+			<ul id="nav-mobile" class="side-nav">
+				<li><a href="/Logout">Logout</a></li>
+			</ul>
+			<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+		</div>
+	</nav>
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<img class="responsive-img" src="{% static 'mvp/imgs/small_deeds_black.png' %}"></img></br>
+			<div class="row center">
+				<h5 class="header col s12 light">Demanding more by asking for little.</h5>
+			</div>
+			<div class="row center">
+				<span id="createNewDeed" class="waves-effect waves-light btn black white-text">Create new deed</span>
+			</div>
+			<form class="col s12 hide" id="newDeed">
+				<div class="row">
+					<div class="input-field col s6">
+						<input placeholder="Title for the deed" id="title" type="text">
+						<label for="title">Title</label>
+					</div>
+					 <div class="input-field col s6">
+						<select id="impact">
+							<option value="" disabled selected>Not quantifiable</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+						<label>How much impact can this make?</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<textarea name="description" id="description" placeholder="Provide a short description of the deed and how it might help" class="materialize-textarea"></textarea>
+						<label for="description">Description</label>
+					</div>
+				</div>
+				<span id="submitNewDeed" class="waves-effect waves-light btn black white-text">Create</span>
+			</form>
+			<br><br>
+
+		</div>
+	</div>
+	<div class="container">
+		<ul id="deedHolder" class="collapsible" data-collapsible="accordion">
+		</ul>
+		<!--<div class="section">
+
+			   Icon Section   
+			<div class="row">
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+						<h5 class="center">Speeds up development</h5>
+
+						<p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+					</div>
+				</div>
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+						<h5 class="center">User Experience Focused</h5>
+
+						<p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+					</div>
+				</div>
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+						<h5 class="center">Easy to work with</h5>
+
+						<p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<br><br>
+
+		<div class="section">
+
+		</div>-->
+	</div>
+
+	<footer class="page-footer black">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Company Bio</h5>
+					<p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Settings</h5>
+					<ul>
+						<li><a class="white-text" href="#!">Link 1</a></li>
+						<li><a class="white-text" href="#!">Link 2</a></li>
+						<li><a class="white-text" href="#!">Link 3</a></li>
+						<li><a class="white-text" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Connect</h5>
+					<ul>
+						<li><a class="white-text" href="#!">Link 1</a></li>
+						<li><a class="white-text" href="#!">Link 2</a></li>
+						<li><a class="white-text" href="#!">Link 3</a></li>
+						<li><a class="white-text" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+			Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--  Scripts-->
+	
+		<script>
+			$(document).ready(function() {
+			    $('select').material_select();
+			    $('.collapsible').collapsible({
+			      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+			    });
+				getAllPledges();
+			});
+			//On click, open up form to create new deed
+			$("#createNewDeed" ).click(function() {
+				$("#newDeed").toggleClass("hide");
+			});
+
+			$("#submitNewDeed").click(function(){
+				var title = $("#title").val();
+				var description = $("#description").val();
+				var impact = $('#impact').find(":selected").text();
+				var deed = {
+					'title': title,
+					'description': description,
+					'impact': impact
+				}
+				$.post("deeds/api/deeds", deed, function(data){
+					$("#title").val("");
+					$("#description").val("");
+					$('#impact').prop('selectedIndex',0);
+					$("#newDeed").toggleClass("hide");
+					getAllPledges();
+				});
+			});
+
+
+			$(".activate").click(function(){
+				
+			});
+
+			function getAllDeeds(pledges){
+				$.get( "/deeds/api/deeds", function( data ) {
+					displayDeeds(data, pledges);
+				});
+			}
+
+			function displayDeeds(data, pledges){
+				$("#deedHolder").empty();
+				$.each(data, function(index, deed){
+					$("#deedHolder").append( '<li>\n<div class="collapsible-header" id="deed'+ deed.id +'">'+ deed.title +'</div>\n<div class="collapsible-body" id="deedbody'+ deed.id +'"><p>'+ deed.description +'</p><p></b>Impact rating:</b> '+ deed.impact +'</p><p>Inactive pledges: '+ deed.inactive_pledges +'</p><p>Active pledges: '+ deed.active_pledges +'<span id="#deedActivate'+ deed.id +'" class="waves-effect waves-light btn activate black white-text">Activate</span></div>\n</li>' );
+				});
+				$.each(pledges, function(index, pledge){
+					var color = "blue-grey"
+					if(pledge.active)
+						color = "green lighten-1";
+					$("#deed"+pledge.deed).toggleClass(color);
+					$("#deedbody"+pledge.deed).toggleClass(color);
+					$("#deedActivate"+pledge.deed).toggleClass("hide");
+				})
+			}
+
+			function getAllPledges(){
+				$.get("/deeds/api/pledges/{{user.username}}/", function(data){
+					getAllDeeds(data)
+				})
+			}
+		</script>
+	</body>
+</html>
